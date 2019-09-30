@@ -1,0 +1,18 @@
+body {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    display: flex;
+    justify-content: center;
+}
+
+#boxTarefas {
+    background-color: #ffffff;
+    width: 70%;
+    margin-top: 5%;
+}
+
+button {
+    background-color: #ba7af8;
+}
+
