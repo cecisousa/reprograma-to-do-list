@@ -17,7 +17,7 @@ body {
 
 #boxTarefas {
     background-color: #ffffff;
-    width: 70%;
+    width: 60%;
     margin-top: 5%;
 }
 
@@ -50,8 +50,36 @@ button {
 #erro {
     color: #ff0000;
     margin: 0px;
+    font-size: 25px;
+    text-align: center;
+    }
+
+#inputTarefa {
+    padding: 90px;
+    color: gray;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid #dcdcdc; 
 }
 
+.adicionada {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 25px;
+    box-shadow: 0px 1px rgba(0,0,0,0.24);
+    margin: 0;
+    width: 100%;
+}
+
+/* .adicionada::after {
+    content: "✖";
+} */
+
+.realizada {
+    color: #808080;
+    text-decoration: line-through;
+    font-weight: 100;
+}
 
 #btnLimparConcluir {
  display: flex;
