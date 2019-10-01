@@ -22,8 +22,7 @@ body {
 }
 
 #titulo {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding: 30px 0;
     letter-spacing: 1px;
 }
@@ -33,6 +32,7 @@ body {
     font-size: 24px;
     padding: 50px 0;
     margin: 0;
+    text-align: center;
 }
 
 button {
@@ -99,3 +99,33 @@ span {
  width: 50%;
 }
 
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 815px){
+    #inputTarefa {
+        font-size: 22px;
+    }
+    
+    #titulo {
+        font-size: 16px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 680px){
+    #inputTarefa {
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 615px){
+    #inputTarefa {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 545px){
+    #inputTarefa {
+        word-wrap: break-word;
+    }
+}

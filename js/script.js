@@ -14,8 +14,8 @@ formulario.addEventListener("submit", function(evento){
         erro.textContent = "";
 
         const novoItem = document.createElement("div");
-        novoItem.setAttribute("id", "novoItem");
         tarefasAdicionadas.appendChild(novoItem);
+        novoItem.setAttribute("id", "novoItem");
 
         const novaTarefa = document.createElement("p");
         novaTarefa.textContent = valorInput;
