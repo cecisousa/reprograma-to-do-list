@@ -66,19 +66,28 @@ button {
     font-size: 30px;
     font-weight: bold;
     padding: 25px;
-    box-shadow: 0px 1px rgba(0,0,0,0.24);
     margin: 0;
-    width: 100%;
+    max-width: 90%;
+    word-wrap: break-word;
 }
-
-/* .adicionada::after {
-    content: "✖";
-} */
 
 .realizada {
     color: #808080;
     text-decoration: line-through;
     font-weight: 100;
+}
+
+#novoItem {
+    display: flex;
+    box-shadow: 0px 1px rgba(0,0,0,0.24);
+    justify-content: space-between;
+}
+
+span {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 25px;
+    margin: 0;
 }
 
 #btnLimparConcluir {
@@ -89,3 +98,4 @@ button {
 #btnLimpar, #btnConcluir {
  width: 50%;
 }
+

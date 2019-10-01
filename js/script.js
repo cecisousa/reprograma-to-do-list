@@ -12,9 +12,16 @@ formulario.addEventListener("submit", function(evento){
         erro.textContent = "Preencha o campo!";
     } else {
         erro.textContent = "";
+
+        const novoItem = document.createElement("div");
+        novoItem.setAttribute("id", "novoItem");
+        tarefasAdicionadas.appendChild(novoItem);
+
         const novaTarefa = document.createElement("p");
-        tarefasAdicionadas.appendChild(novaTarefa);
+        novaTarefa.textContent = valorInput;
+        novoItem.appendChild(novaTarefa);
         novaTarefa.setAttribute("class", "adicionada");
+
         novaTarefa.addEventListener("click", function(){
             if (novaTarefa.classList.contains("realizada")){
                 novaTarefa.classList.remove("realizada");
@@ -22,10 +29,23 @@ formulario.addEventListener("submit", function(evento){
                 novaTarefa.classList.add("realizada");
             }
         });
-        novaTarefa.textContent = valorInput;
+        
+        const btnExcluir = document.createElement("span");
+        btnExcluir.textContent = "✖";
+        novoItem.appendChild(btnExcluir);
+
+        btnExcluir.addEventListener("click", function(){
+            tarefasAdicionadas.removeChild(novoItem);
+        });
+
     }
     inputTarefa.value = "";
 });
+
+
+
+
+
 
 // inputTarefa.value = "";
 // const novosBotoes = document.createElement("div");
@@ -39,3 +59,7 @@ formulario.addEventListener("submit", function(evento){
 // btnConcluir.setAttribute("id", "btnConcluir");
 // btnConcluir.textContent = "Concluir todas as tarefas";
 // novosBotoes.appendChild(btnConcluir);
+
+
+
+
