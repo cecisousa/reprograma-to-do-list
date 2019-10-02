@@ -2,8 +2,9 @@ const btnAdd = document.getElementById("btnAdd");
 const inputTarefa = document.getElementById("inputTarefa");
 const tarefasAdicionadas = document.getElementById("tarefasAdicionadas");
 const erro = document.getElementById("erro");
-const btnLimpar = document.getElementById("btnLimpar");
+const btnConcluirLimpar = document.getElementById("btnConcluirLimpar");
 const btnConcluir = document.getElementById("btnConcluir");
+const btnLimpar = document.getElementById("btnLimpar");
 
 btnAdd.addEventListener("click", function(evento){
     evento.preventDefault();
@@ -12,6 +13,9 @@ btnAdd.addEventListener("click", function(evento){
         erro.textContent = "Preencha o campo!";
     } else {
         erro.textContent = "";
+
+        btnConcluirLimpar.classList.remove("btnConcluirLimparOff");
+        btnConcluirLimpar.classList.add("btnConcluirLimparOn");
 
         const novoItem = document.createElement("div");
         tarefasAdicionadas.appendChild(novoItem);
@@ -37,16 +41,18 @@ btnAdd.addEventListener("click", function(evento){
         btnExcluir.addEventListener("click", function(){
             tarefasAdicionadas.removeChild(novoItem);
         });
-
-        btnLimpar.addEventListener("click", function(evento){
-            evento.preventDefault();
-            tarefasAdicionadas.removeChild(novoItem);
-        });
         
         btnConcluir.addEventListener("click", function(evento){
             evento.preventDefault();
             novaTarefa.classList.add("realizada");
         });
+
+        btnLimpar.addEventListener("click", function(evento){
+            evento.preventDefault();
+            tarefasAdicionadas.removeChild(novoItem);
+            btnConcluirLimpar.classList.add("btnConcluirLimparOff");
+            btnConcluirLimpar.classList.remove("btnConcluirLimparOn");
+        });         
     }
     inputTarefa.value = "";
 });

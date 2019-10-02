@@ -93,12 +93,16 @@ span {
     margin: 0;
 }
 
-#btnLimparConcluir {
+.btnConcluirLimparOff {
+    display: none;
+}
+
+.btnConcluirLimparOn {
     display: flex;
     justify-content: space-around;
 }
 
-#btnLimpar, #btnConcluir {
+#btnConcluir, #btnLimpar {
     width: 50%;
 }
 
