@@ -32,10 +32,13 @@ body {
 
 #inputTarefa {
     width: 100%;
-    font-size: 24px;
-    padding: 50px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+    padding: 90px;
     margin: 0;
     text-align: center;
+    border: 2px solid #dcdcdc;
 }
 
 button {
@@ -44,7 +47,7 @@ button {
     font-weight: bolder;
     color: #ffffff;
     font-size: 24px;
-    padding: 25px 0;
+    padding: 25px;
     text-align: center;
     letter-spacing: 3px;
     width: 100%;
@@ -56,14 +59,6 @@ button {
     font-size: 25px;
     text-align: center;
     }
-
-#inputTarefa {
-    padding: 90px;
-    color: gray;
-    font-weight: bold;
-    font-size: 30px;
-    border: 2px solid #dcdcdc; 
-}
 
 .adicionada {
     font-size: 30px;
@@ -114,28 +109,40 @@ span {
     }
 }
 
-@media (max-width: 650px){
+@media (max-width: 800px){
+    button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 655px){
     #boxTarefas {
         width: 85%;
     }
 
     #inputTarefa {
-        padding: 35px 0;
+        padding: 35px;
+    }
+
+    .btnConcluirLimparOn {
+        display: block;
+    }
+
+    #btnConcluir, #btnLimpar {
+        width: 100%;
     }
 }
  
 @media (max-width: 430px){
     #titulo {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .adicionada {
         font-size: 25px;
     }
-}
 
-@media (max-width: 350px){
-    #titulo {
-        font-size: 14px;
+    #inputTarefa {
+        font-size: 25px;
     }
 }
