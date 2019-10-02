@@ -94,12 +94,12 @@ span {
 }
 
 #btnLimparConcluir {
- display: flex;
- justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 #btnLimpar, #btnConcluir {
- width: 50%;
+    width: 50%;
 }
 
 /* ===== MEDIA QUERIES ===== */
