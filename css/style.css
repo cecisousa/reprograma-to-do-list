@@ -10,6 +10,8 @@ html {
 body {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    overflow-x: hidden;
     background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
     display: flex;
     justify-content: center;
@@ -18,12 +20,13 @@ body {
 #boxTarefas {
     background-color: #ffffff;
     width: 60%;
-    margin-top: 5%;
+    margin: 5% 0;
+
 }
 
 #titulo {
     text-align: center;
-    padding: 30px 0;
+    padding: 30px;
     letter-spacing: 1px;
 }
 
@@ -101,31 +104,34 @@ span {
 
 /* ===== MEDIA QUERIES ===== */
 
-@media (max-width: 815px){
-    #inputTarefa {
-        font-size: 22px;
+@media (max-width: 1200px){
+    #boxTarefas {
+        width: 80%;
     }
-    
+}
+
+@media (max-width: 650px){
+    #boxTarefas {
+        width: 85%;
+    }
+
+    #inputTarefa {
+        padding: 35px 0;
+    }
+}
+ 
+@media (max-width: 430px){
     #titulo {
         font-size: 16px;
-        padding: 25px;
+    }
+
+    .adicionada {
+        font-size: 25px;
     }
 }
 
-@media (max-width: 680px){
-    #inputTarefa {
-        word-wrap: break-word;
-    }
-}
-
-@media (max-width: 615px){
-    #inputTarefa {
+@media (max-width: 350px){
+    #titulo {
         font-size: 14px;
-    }
-}
-
-@media (max-width: 545px){
-    #inputTarefa {
-        word-wrap: break-word;
     }
 }
