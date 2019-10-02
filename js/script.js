@@ -1,11 +1,11 @@
-const formulario = document.getElementById("formulario");
+const btnAdd = document.getElementById("btnAdd");
 const inputTarefa = document.getElementById("inputTarefa");
 const tarefasAdicionadas = document.getElementById("tarefasAdicionadas");
 const erro = document.getElementById("erro");
 const btnLimpar = document.getElementById("btnLimpar");
 const btnConcluir = document.getElementById("btnConcluir");
 
-formulario.addEventListener("submit", function(evento){
+btnAdd.addEventListener("click", function(evento){
     evento.preventDefault();
     const valorInput = inputTarefa.value;
     if (valorInput.trim() === ""){
@@ -38,28 +38,16 @@ formulario.addEventListener("submit", function(evento){
             tarefasAdicionadas.removeChild(novoItem);
         });
 
+        btnLimpar.addEventListener("click", function(evento){
+            evento.preventDefault();
+            tarefasAdicionadas.removeChild(novoItem);
+        });
+        
+        btnConcluir.addEventListener("click", function(evento){
+            evento.preventDefault();
+            novaTarefa.classList.add("realizada");
+        });
     }
     inputTarefa.value = "";
 });
-
-
-
-
-
-
-// inputTarefa.value = "";
-// const novosBotoes = document.createElement("div");
-// novosBotoes.setAttribute("id", "btnLimparConcluir");
-// formulario.appendChild(novosBotoes);
-// const btnLimpar = document.createElement("button");
-// btnLimpar.setAttribute("id", "btnLimpar");
-// btnLimpar.textContent = "Excluir todas as tarefas";
-// novosBotoes.appendChild(btnLimpar);
-// const btnConcluir = document.createElement("button");
-// btnConcluir.setAttribute("id", "btnConcluir");
-// btnConcluir.textContent = "Concluir todas as tarefas";
-// novosBotoes.appendChild(btnConcluir);
-
-
-
 
