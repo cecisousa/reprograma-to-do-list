@@ -19,7 +19,8 @@ btnAdd.addEventListener("click", function(evento){
 
         const novoItem = document.createElement("div");
         tarefasAdicionadas.appendChild(novoItem);
-        novoItem.setAttribute("id", "novoItem");
+        novoItem.setAttribute("class", "novoItem");
+        novoItem.setAttribute("draggable", "true")
 
         const novaTarefa = document.createElement("p");
         novaTarefa.textContent = valorInput;
@@ -57,3 +58,19 @@ btnAdd.addEventListener("click", function(evento){
     inputTarefa.value = "";
 });
 
+tarefasAdicionadas.addEventListener("dragstart", function (ev) { 
+    dragging = ev.target.closest(".novoItem")//tarefas
+
+})
+
+tarefasAdicionadas.addEventListener("dragover", function (ev) {
+    ev.preventDefault();
+    const node = ev.target.closest(".novoItem") 
+    this.insertBefore(dragging, node)
+
+})
+
+tarefasAdicionadas.addEventListener("dragend", function (ev) { 
+    dragging = null     
+
+})
