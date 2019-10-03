@@ -5,6 +5,7 @@ const erro = document.getElementById("erro");
 const btnConcluirLimpar = document.getElementById("btnConcluirLimpar");
 const btnConcluir = document.getElementById("btnConcluir");
 const btnLimpar = document.getElementById("btnLimpar");
+const btnRemoverConcluidas = document.getElementById("btnRemoverConcluidas");
 
 btnAdd.addEventListener("click", function(evento){
     evento.preventDefault();
@@ -24,6 +25,12 @@ btnAdd.addEventListener("click", function(evento){
 
         const novaTarefa = document.createElement("p");
         novaTarefa.textContent = valorInput;
+
+        // novaTarefa.addEventListener("dblclick", function(){
+        //     novaTarefa.classList.remove("realizada");
+        //     novaTarefa.setAttribute("contentEditable", true);
+        // });
+
         novoItem.appendChild(novaTarefa);
         novaTarefa.setAttribute("class", "adicionada");
 
@@ -53,24 +60,29 @@ btnAdd.addEventListener("click", function(evento){
             tarefasAdicionadas.removeChild(novoItem);
             btnConcluirLimpar.classList.add("btnConcluirLimparOff");
             btnConcluirLimpar.classList.remove("btnConcluirLimparOn");
-        });         
+        });
+        
+        btnRemoverConcluidas.addEventListener("click", function(evento){
+            evento.preventDefault();
+            if (novaTarefa.classList.contains("realizada")){
+                tarefasAdicionadas.removeChild(novoItem);
+            }
+        })
+
     }
     inputTarefa.value = "";
 });
 
-tarefasAdicionadas.addEventListener("dragstart", function (ev) { 
-    dragging = ev.target.closest(".novoItem")//tarefas
-
+tarefasAdicionadas.addEventListener("dragstart", function(evento){ 
+    dragging = evento.target.closest(".novoItem");
 })
 
-tarefasAdicionadas.addEventListener("dragover", function (ev) {
-    ev.preventDefault();
-    const node = ev.target.closest(".novoItem") 
-    this.insertBefore(dragging, node)
-
+tarefasAdicionadas.addEventListener("dragover", function(evento){
+    evento.preventDefault();
+    const node = evento.target.closest(".novoItem");
+    this.insertBefore(dragging, node);
 })
 
-tarefasAdicionadas.addEventListener("dragend", function (ev) { 
-    dragging = null     
-
+tarefasAdicionadas.addEventListener("dragend", function(evento){ 
+    dragging = null;
 })

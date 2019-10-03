@@ -19,23 +19,23 @@ body {
 
 #boxTarefas {
     background-color: #ffffff;
-    width: 60%;
+    width: 50%;
     margin: 5% 0;
-
 }
 
 #titulo {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     letter-spacing: 1px;
+    font-size: 14px;
 }
 
 #inputTarefa {
     width: 100%;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     color: gray;
-    padding: 90px;
+    padding: 30px;
     margin: 0;
     text-align: center;
     border: 2px solid #dcdcdc;
@@ -46,8 +46,8 @@ button {
     text-transform: uppercase;
     font-weight: bolder;
     color: #ffffff;
-    font-size: 24px;
-    padding: 25px;
+    font-size: 18px;
+    padding: 20px;
     text-align: center;
     letter-spacing: 3px;
     width: 100%;
@@ -56,12 +56,12 @@ button {
 #erro {
     color: #ff0000;
     margin: 0px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     }
 
 .adicionada {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     padding: 25px;
     margin: 0;
@@ -82,7 +82,7 @@ button {
 }
 
 span {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     padding: 25px;
     margin: 0;
@@ -97,52 +97,50 @@ span {
     justify-content: space-around;
 }
 
-#btnConcluir, #btnLimpar {
-    width: 50%;
+#btnConcluir, #btnLimpar, #btnRemoverConcluidas {
+    width: 33.3%;
 }
 
 /* ===== MEDIA QUERIES ===== */
 
 @media (max-width: 1200px){
     #boxTarefas {
-        width: 80%;
+        width: 60%;
     }
 }
 
-@media (max-width: 800px){
-    button {
-        font-size: 18px;
+@media (max-width: 980px){
+    .btnConcluirLimparOn {
+        display: block;
+    }
+
+    #btnConcluir, #btnLimpar, #btnRemoverConcluidas {
+        width: 100%;
     }
 }
 
 @media (max-width: 655px){
     #boxTarefas {
-        width: 85%;
-    }
-
-    #inputTarefa {
-        padding: 35px;
-    }
-
-    .btnConcluirLimparOn {
-        display: block;
-    }
-
-    #btnConcluir, #btnLimpar {
-        width: 100%;
+        width: 70%;
     }
 }
- 
+
+@media (max-width: 500px){
+    #boxTarefas {
+        width: 80%;
+    }
+}
+
 @media (max-width: 430px){
     #titulo {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .adicionada {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     #inputTarefa {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
