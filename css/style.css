@@ -75,7 +75,7 @@ button {
     font-weight: 100;
 }
 
-#novoItem {
+.novoItem {
     display: flex;
     box-shadow: 0px 1px rgba(0,0,0,0.24);
     justify-content: space-between;
