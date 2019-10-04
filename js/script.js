@@ -22,7 +22,7 @@ btnAdd.addEventListener("click", function(evento){
 
         const novoItem = document.createElement("div");
         tarefasAdicionadas.appendChild(novoItem);
-        novoItem.setAttribute("class", "novoItem");
+        novoItem.classList.add("novoItem");
         novoItem.setAttribute("draggable", "true")
 
         const novaTarefa = document.createElement("p");
@@ -34,7 +34,7 @@ btnAdd.addEventListener("click", function(evento){
         });
 
         novoItem.appendChild(novaTarefa);
-        novaTarefa.setAttribute("class", "adicionada");
+        novaTarefa.classList.add("adicionada");
 
         novaTarefa.addEventListener("click", function(){
             if (novaTarefa.classList.contains("realizada")){
@@ -47,7 +47,7 @@ btnAdd.addEventListener("click", function(evento){
         const novaEtiqueta = document.createElement("p");
         novaEtiqueta.textContent = valorEtiqueta;
         novoItem.appendChild(novaEtiqueta);
-        novaEtiqueta.setAttribute("class", "etiqueta");
+        novaEtiqueta.classList.add("etiqueta");
         
         novaEtiqueta.addEventListener("dblclick", function(){
             novaEtiqueta.setAttribute("contentEditable", true);
