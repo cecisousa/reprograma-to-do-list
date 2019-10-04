@@ -41,6 +41,21 @@ body {
     border: 2px solid #dcdcdc;
 }
 
+#inputEtiqueta {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    padding: 10px 30px;
+    margin: 0;
+    text-align: center;
+    border-left: 2px solid #dcdcdc;
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+    border-top: none;
+
+}
+
 button {
     background-color: #ba7af8;
     text-transform: uppercase;
@@ -65,7 +80,7 @@ button {
     font-weight: bold;
     padding: 25px;
     margin: 0;
-    max-width: 90%;
+    width: 65%;
     word-wrap: break-word;
 }
 
@@ -75,10 +90,22 @@ button {
     font-weight: 100;
 }
 
+.etiqueta {
+    color: #ba7af8;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px;
+    margin: 0;
+    width: 25%;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+}
+
 .novoItem {
     display: flex;
     box-shadow: 0px 1px rgba(0,0,0,0.24);
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 span {
@@ -86,6 +113,9 @@ span {
     font-weight: bold;
     padding: 25px;
     margin: 0;
+    width: 10%;
+    display: flex;
+    align-items: center;
 }
 
 .btnConcluirLimparOff {
@@ -142,5 +172,9 @@ span {
 
     #inputTarefa {
         font-size: 20px;
+    }
+
+    #inputEtiqueta {
+        font-size: 16px;
     }
 }

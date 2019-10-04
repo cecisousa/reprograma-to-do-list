@@ -1,5 +1,6 @@
 const btnAdd = document.getElementById("btnAdd");
 const inputTarefa = document.getElementById("inputTarefa");
+const inputEtiqueta = document.getElementById("inputEtiqueta");
 const tarefasAdicionadas = document.getElementById("tarefasAdicionadas");
 const erro = document.getElementById("erro");
 const btnConcluirLimpar = document.getElementById("btnConcluirLimpar");
@@ -10,7 +11,8 @@ const btnRemoverConcluidas = document.getElementById("btnRemoverConcluidas");
 btnAdd.addEventListener("click", function(evento){
     evento.preventDefault();
     const valorInput = inputTarefa.value;
-    if (valorInput.trim() === ""){
+    const valorEtiqueta = inputEtiqueta.value;
+    if (valorInput.trim() === "" || valorEtiqueta.trim() === ""){
         erro.textContent = "Preencha o campo!";
     } else {
         erro.textContent = "";
@@ -41,7 +43,16 @@ btnAdd.addEventListener("click", function(evento){
                 novaTarefa.classList.add("realizada");
             }
         });
+
+        const novaEtiqueta = document.createElement("p");
+        novaEtiqueta.textContent = valorEtiqueta;
+        novoItem.appendChild(novaEtiqueta);
+        novaEtiqueta.setAttribute("class", "etiqueta");
         
+        novaEtiqueta.addEventListener("dblclick", function(){
+            novaEtiqueta.setAttribute("contentEditable", true);
+        });
+
         const btnExcluir = document.createElement("span");
         btnExcluir.textContent = "✖";
         novoItem.appendChild(btnExcluir);
@@ -70,7 +81,8 @@ btnAdd.addEventListener("click", function(evento){
         })
 
     }
-    inputTarefa.value = "";
+    inputTarefa.value = "";;
+    inputEtiqueta.value = "";
 });
 
 tarefasAdicionadas.addEventListener("dragstart", function(evento){ 
