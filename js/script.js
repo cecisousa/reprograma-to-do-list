@@ -26,10 +26,10 @@ btnAdd.addEventListener("click", function(evento){
         const novaTarefa = document.createElement("p");
         novaTarefa.textContent = valorInput;
 
-        // novaTarefa.addEventListener("dblclick", function(){
-        //     novaTarefa.classList.remove("realizada");
-        //     novaTarefa.setAttribute("contentEditable", true);
-        // });
+        novaTarefa.addEventListener("dblclick", function(){
+            novaTarefa.classList.remove("realizada");
+            novaTarefa.setAttribute("contentEditable", true);
+        });
 
         novoItem.appendChild(novaTarefa);
         novaTarefa.setAttribute("class", "adicionada");
